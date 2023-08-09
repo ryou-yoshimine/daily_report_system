@@ -1,7 +1,7 @@
 # Compiled class file
 *.class
 
-# Pakage File #
+# Package Files #
 *.jar
 *.war
 *.ear
@@ -16,8 +16,8 @@ target/
 build/
 
 # OS Files
-thumbs.db
+Thumbs.db
 .DS_Store
 
 # Application Properties
-arc/main/resources/application.properties
+src/main/resources/application.properties
