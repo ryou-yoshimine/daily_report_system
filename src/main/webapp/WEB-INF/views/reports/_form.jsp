@@ -3,8 +3,8 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page import="constants.AttributeConst" %>
 
-<c:if test="${error != null}">
-    <div id="flush_erro">
+<c:if test="${errors != null}">
+    <div id="flush_error">
         入力内容にエラーがあります。<br />
         <c:forEach var="error" items="${errors}">
              ・<c:out value="${error}" /><br />
@@ -14,7 +14,7 @@
 </c:if>
 <fmt:parseDate value="${report.reportDate}" pattern="yyyy-MM-dd" var="reportDay"/>
 <label for="${AttributeConst.REP_DATE.getValue()}">日付</label><br />
-<input type="date" name="${AttributeConst.REP_DATE.getValue()}" id="${AttributeConst.REP_DATE.getValue()}" value="${reportDay}" pattern='yyyy-MM-dd' />" />
+<input type="date" name="${AttributeConst.REP_DATE.getValue()}" id="${AttributeConst.REP_DATE.getValue()}" value="<fmt:formatDate value='${reportDay}' pattern='yyyy-MM-dd' />" />
 <br /><br />
 
 <label>氏名</label><br />
